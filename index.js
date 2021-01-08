@@ -12,8 +12,6 @@ app.use(logger);
 // Gets All News
 app.get('/GetAllNews?:parameters', (req, res) => {
     let searchTerm = req.originalUrl.replace('/GetAllNews?','');
-    console.log(searchTerm);
-    console.log("https://newsapi.org/v2/everything?" + searchTerm + "&sortBy=publishedAt&apiKey=def59b2c8beb4495896b7bd46a19ca4a");
     fetch("https://newsapi.org/v2/everything?" + searchTerm + "&sortBy=publishedAt&apiKey=def59b2c8beb4495896b7bd46a19ca4a", {
           "method": "GET"
         })
